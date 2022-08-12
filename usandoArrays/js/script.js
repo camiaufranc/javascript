@@ -30,7 +30,7 @@ const estudiante = [
     carrera: "Ingeniería Mecánica",
     cant_materias: 2,
     nombre_materia: "Analisis y Fisica",
-    promedio: 5
+    promedio: 8
 },
     {
     nombre: "Francisco",
