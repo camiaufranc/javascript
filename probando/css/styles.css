@@ -1,0 +1,28 @@
+/* @charset "utf-8";
+#more {
+  display: inline;
+}
+
+#caja {
+  overflow: hidden;
+} */
+
+.myBtn {
+    background-color: transparent!important;
+    color: #000000;
+    border: none;
+    font-family: Arial;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  p {
+    overflow: hidden;
+    transition: max-height 0.7s;
+    max-height: 100px;
+  }
+  
+  p.collapse {
+    max-height: 30px;
+  }
