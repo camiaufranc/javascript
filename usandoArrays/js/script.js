@@ -1,19 +1,47 @@
 const sectionCourses = document.getElementById('cursos');
 const quantityCourses = 4;
 
-function evaluatePlace(univeristy, turn) {
+function evaluatePlace(university, turn) {
     let mesagge = "";
     let price = 0;
-    
+
+    switch (university) {
+        case 1:
+            price = 100;
+            price = price * turn;
+            mesagge = "Acá se encuentra su Curso0: ";
+            break;
+        case 2:
+            price = 100;
+            price = price * turn;
+            mesagge = "Acá se encuentra su Curso1: ";
+            break;
+        case 3:
+            price = 100;
+            price = price * turn;
+            mesagge = "Acá se encuentra su Curso2: ";
+            break;
+        case 4:
+            price = 100;
+            price = price * turn;
+            mesagge = "Acá se encuentra su Curso3: ";
+            break;
+        default:
+            mesagge = "Lo sentimos, ese Curso no existe!"      
+}
+    console.log(mesagge);
 }
 
+
 choosePlace = () => {
-    const univeristy = Number(prompt("Elegí en que Universidad querés cursar: "));
+    const university = Number(prompt("Elegí en que Universidad querés cursar: "));
     
     const turn = Number(prompt("Ingresar turno en el que se quiera cursar Mañana (1), Tarde (2), Noche (3): "));
 
     evaluatePlace(university, turn)
 }
+
+choosePlace();
 
 showCourses = () => {
     let counter = 0;
@@ -111,5 +139,4 @@ for (const alumno of alumnos_seleccionados()) {
     // console.log(`${alumno.nombre}`)
 }
 
-console.log(alumnos_seleccionados());
- */
+console.log(alumnos_seleccionados()); */
