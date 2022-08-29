@@ -1,8 +1,46 @@
-alert("Hola! Estas comenzando a jugar el simulacro de la Universidad de Michigan.");
+const sectionCourses = document.getElementById('cursos');
+const quantityCourses = 4;
+
+function evaluatePlace(univeristy, turn) {
+    let mesagge = "";
+    let price = 0;
+    
+}
+
+choosePlace = () => {
+    const univeristy = Number(prompt("Elegí en que Universidad querés cursar: "));
+    
+    const turn = Number(prompt("Ingresar turno en el que se quiera cursar Mañana (1), Tarde (2), Noche (3): "));
+
+    evaluatePlace(university, turn)
+}
+
+showCourses = () => {
+    let counter = 0;
+
+    while (counter < quantityCourses) {
+        sectionCourses.innerHTML += (`
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./img/curso${counter}.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Curso ${counter}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+        `);
+    counter++;
+    }
+}
+
+showCourses();
+
+
+/* alert("Hola! Estas comenzando a jugar el simulacro de la Universidad de Michigan.");
 let universidad = prompt("Elegí en que Universidad querés cursar: ");
 let turno = prompt("Turno Mañana, Tarde o Noche?: ");
 
-/* function names() {
+function names() {
     let nombres = [];
     let cont = '';
     let x;
@@ -15,7 +53,7 @@ let turno = prompt("Turno Mañana, Tarde o Noche?: ");
     for (i = 0; i <= 2; i++) {
         cont += nombres[i] + " ";
     }
-} */
+}
 
 const estudiante = [
     {
@@ -74,3 +112,4 @@ for (const alumno of alumnos_seleccionados()) {
 }
 
 console.log(alumnos_seleccionados());
+ */
