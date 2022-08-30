@@ -1,5 +1,24 @@
 const sectionCourses = document.getElementById('cursos');
+const sectionCompras = document.getElementById('compras');
+const iconCarrito = document.getElementById('cart');
 const quantityCourses = 4;
+
+const showCatedra = (mesagge, price) => {
+    let mesaggeFacultad = document.createElement('p');
+    mesaggeFacultad.innerHTML = mesagge;
+    let totalPrice = document.createElement('p');
+    totalPrice.innerHTML = price;
+
+    sectionCompras.append(mesaggeFacultad);
+    sectionCompras.append(totalPrice);
+}
+
+function showQuantityCarrito(quantity) {
+    let numberItem = document.createElement('div');
+    numberItem.innerHTML = quantity;
+    iconCarrito.append(numberItem);
+
+}
 
 function evaluatePlace(university, turn) {
     let mesagge = "";
@@ -28,16 +47,17 @@ function evaluatePlace(university, turn) {
             break;
         default:
             mesagge = "Lo sentimos, ese Curso no existe!"      
-}
-    console.log(mesagge);
-}
+    }
 
+    showCatedra(mesagge, price);
+
+}
 
 choosePlace = () => {
     const university = Number(prompt("Elegí en que Universidad querés cursar: "));
     
     const turn = Number(prompt("Ingresar turno en el que se quiera cursar Mañana (1), Tarde (2), Noche (3): "));
-
+    showQuantityCarrito(quantity);
     evaluatePlace(university, turn)
 }
 
