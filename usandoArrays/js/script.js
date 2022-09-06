@@ -20,45 +20,47 @@ function showQuantityCarrito(quantity) {
 
 }
 
-function evaluatePlace(university, turn) {
+function evaluatePlace(university, quantity) {
     let mesagge = "";
     let price = 0;
 
     switch (university) {
         case 1:
             price = 100;
-            price = price * turn;
+            price = price * quantity;
             mesagge = "Acá se encuentra su Curso0: ";
             break;
         case 2:
-            price = 100;
-            price = price * turn;
+            price = 120;
+            price = price * quantity;
             mesagge = "Acá se encuentra su Curso1: ";
             break;
-        case 3:
-            price = 100;
-            price = price * turn;
+        case 3: 
+            price = 130;
+            price = price * quantity;
             mesagge = "Acá se encuentra su Curso2: ";
             break;
         case 4:
-            price = 100;
-            price = price * turn;
+            price = 150;
+            price = price * quantity;
             mesagge = "Acá se encuentra su Curso3: ";
             break;
         default:
-            mesagge = "Lo sentimos, ese Curso no existe!"      
+            mesagge = "Lo sentimos, ese Curso no existe!";      
     }
 
+
+    
     showCatedra(mesagge, price);
 
+    showQuantityCarrito(quantity);
 }
 
 choosePlace = () => {
     const university = Number(prompt("Elegí en que Universidad querés cursar: "));
     
-    const turn = Number(prompt("Ingresar turno en el que se quiera cursar Mañana (1), Tarde (2), Noche (3): "));
-    showQuantityCarrito(quantity);
-    evaluatePlace(university, turn)
+    const quantity = Number(prompt("Ingresar turno en el que se quiera cursar Mañana (1), Tarde (2), Noche (3): "));
+    evaluatePlace(university, quantity)
 }
 
 choosePlace();
@@ -82,6 +84,11 @@ showCourses = () => {
 }
 
 showCourses();
+
+
+
+
+
 
 
 /* alert("Hola! Estas comenzando a jugar el simulacro de la Universidad de Michigan.");
